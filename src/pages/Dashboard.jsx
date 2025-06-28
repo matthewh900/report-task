@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import reportData from "../data/reports.json";
 import Filter from "../components/Filter";
 import ReportList from "../components/ReportList";
 
@@ -14,16 +13,22 @@ function Dashboard() {
     const fetchReports = async () => {
       try {
         setLoading(true);
-        await new Promise((res) => setTimeout(res, 1000));
-        setReports(reportData);
-        setFiltered(reportData);
+        const response = await fetch("/api/reports");
+        if (!response.ok) {
+          throw new Error(`Error: ${response.status}`);
+        }
+        const data = await response.json();
+        setReports(data);
+        setFiltered(data);
         setError(null);
       } catch (err) {
         setError("Failed to load reports.");
+        console.error(err);
       } finally {
         setLoading(false);
       }
     };
+
     fetchReports();
   }, []);
 

@@ -1,12 +1,16 @@
-# React + Vite
+REPORT TASK
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This simple react based dashboard module displays a list of reports fetched from a mocked api and allows the user to filter reports by category. This project uses json-server to create a mock api and concurrently to run both the app and the api server
 
-Currently, two official plugins are available:
+GETTING STARTED
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Requirements:
+Node.js and npm installed
 
-## Expanding the ESLint configuration
+SET-UP
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+-git clone https://github.com/matthewh900/report-task.git
+-cd report-task
+-npm install
+-npm run dev
+-Open localhost link to see the app.
